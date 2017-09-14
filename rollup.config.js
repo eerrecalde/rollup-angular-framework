@@ -1,6 +1,7 @@
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
+import eslint from 'rollup-plugin-eslint';
 import babelrc from 'babelrc-rollup';
 import pkg from './package.json';
 
@@ -31,6 +32,7 @@ export default [
 		plugins: [
 			resolve(), // so Rollup can find `ms`
 			commonjs(), // so Rollup can convert `ms` to an ES module
+			eslint(),
 			babel(babelrc({
 	      addExternalHelpersPlugin: false,
 	      config: babelConfig,
@@ -46,7 +48,7 @@ export default [
 	// the `targets` option which can specify `dest` and `format`)
 	{
 		input: 'lib/index.js',
-		external: ['ms', 'angular'],
+		external: ['angular'],
 		output: [
 			{ file: pkg.main, format: 'cjs' },
 			{ file: pkg.module, format: 'es' }
