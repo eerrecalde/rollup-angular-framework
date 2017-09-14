@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Directive_Ctp_Paginator When sending 2 as itemsPerPage, it should match snapshot 1`] = `"[{\\"productName\\":\\"Office Standard\\",\\"productCategory\\":\\"5764995907042_9b26\\"},{\\"productName\\":\\"SQL Server Standard Edition\\",\\"productCategory\\":\\"5764995907042_9b26\\"}]"`;
