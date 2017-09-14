@@ -1,5 +1,5 @@
 {
-  "name": "rollup-starter-lib",
+  "name": "rollup-angular-framework",
   "version": "1.0.0",
   "main": "dist/angular.fwk.cjs.js",
   "module": "dist/angular.fwk.esm.js",
