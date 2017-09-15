@@ -19,7 +19,18 @@ const babelConfig = {
   ]
 };
 
+const plugins = [
+  resolve(), // so Rollup can find `ms`
+  commonjs(), // so Rollup can convert `ms` to an ES module
+  eslint(),
+  babel(babelrc({
+    config: babelConfig,
+    exclude: 'node_modules/**'
+  }))
+]
+
 export default [
+
 	// browser-friendly UMD build
 	{
 		input: 'lib/index.js',
@@ -32,22 +43,19 @@ export default [
 			file: pkg.browser,
 			format: 'umd'
 		},
-		plugins: [
-			resolve(), // so Rollup can find `ms`
-			commonjs(), // so Rollup can convert `ms` to an ES module
-			eslint(),
-			babel(babelrc({
-	      config: babelConfig,
-	      exclude: 'node_modules/**'
-	    }))
-		]
+		plugins: plugins
+	},
+  {
+		input: 'lib/core.js',
+		name: 'test',
+		output: {
+			file: 'dist/core.umd.js',
+			format: 'umd'
+		},
+		plugins: plugins
 	},
 
 	// CommonJS (for Node) and ES module (for bundlers) build.
-	// (We could have three entries in the configuration array
-	// instead of two, but it's quicker to generate multiple
-	// builds from a single configuration where possible, using
-	// the `targets` option which can specify `dest` and `format`)
 	{
 		input: 'lib/index.js',
 		external: ['angular'],
@@ -56,25 +64,6 @@ export default [
 			{ file: pkg.module, format: 'es' }
 		]
 	},
-
-  {
-		input: 'lib/core.js',
-		name: 'test',
-		output: {
-			file: 'dist/core.umd.js',
-			format: 'umd'
-		},
-		plugins: [
-			resolve(), // so Rollup can find `ms`
-			commonjs(), // so Rollup can convert `ms` to an ES module
-			eslint(),
-			babel(babelrc({
-	      config: babelConfig,
-	      exclude: 'node_modules/**'
-	    }))
-		]
-	},
-
   {
 		input: 'lib/core.js',
 		external: ['angular'],
