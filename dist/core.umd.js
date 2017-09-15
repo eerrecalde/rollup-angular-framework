@@ -1,8 +1,8 @@
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-	typeof define === 'function' && define.amd ? define(factory) :
-	(global.test = factory());
-}(this, (function () { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+	typeof define === 'function' && define.amd ? define(['exports'], factory) :
+	(factory((global.test = {})));
+}(this, (function (exports) { 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
   return typeof obj;
@@ -284,8 +284,13 @@ var FilterIoCore = function filterIo() {
   };
 }();
 
-var core = { FilterIoCore: FilterIoCore };
+function testingStuff(a) {
+  return a + 37;
+}
 
-return core;
+exports.testingStuff = testingStuff;
+exports.FilterIoCore = FilterIoCore;
+
+Object.defineProperty(exports, '__esModule', { value: true });
 
 })));

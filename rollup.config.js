@@ -73,5 +73,14 @@ export default [
 	      exclude: 'node_modules/**'
 	    }))
 		]
+	},
+
+  {
+		input: 'lib/core.js',
+		external: ['angular'],
+		output: [
+			{ file: 'dist/core.cjs.js', format: 'cjs' },
+			{ file: 'dist/core.esm.js', format: 'es' }
+		]
 	}
 ];
