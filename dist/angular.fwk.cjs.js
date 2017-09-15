@@ -504,5 +504,4 @@ directiveSearch.directive('ctpSearchPagingRequester',
   ['legacyFactory', 'stateProcessFactory','searchPagingFactory', searchPaging]);
 
 exports.directiveDataModule = directiveData;
-exports.FilterIoCore = FilterIoCore;
 exports.directiveSearchModule = directiveSearch;

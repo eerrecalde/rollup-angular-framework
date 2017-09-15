@@ -55,5 +55,23 @@ export default [
 			{ file: pkg.main, format: 'cjs' },
 			{ file: pkg.module, format: 'es' }
 		]
+	},
+
+  {
+		input: 'lib/core.js',
+		name: 'test',
+		output: {
+			file: 'dist/core.umd.js',
+			format: 'umd'
+		},
+		plugins: [
+			resolve(), // so Rollup can find `ms`
+			commonjs(), // so Rollup can convert `ms` to an ES module
+			eslint(),
+			babel(babelrc({
+	      config: babelConfig,
+	      exclude: 'node_modules/**'
+	    }))
+		]
 	}
 ];
