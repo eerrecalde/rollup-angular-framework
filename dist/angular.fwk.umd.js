@@ -631,6 +631,7 @@ function searchPaging(legacyFactory, stateProcessFactory, SearchPagingFactory) {
 directiveSearch.directive('ctpSearchPagingRequester', ['legacyFactory', 'stateProcessFactory', 'searchPagingFactory', searchPaging]);
 
 exports.directiveDataModule = directiveData;
+exports.FilterIoCore = FilterIoCore;
 exports.directiveSearchModule = directiveSearch;
 
 Object.defineProperty(exports, '__esModule', { value: true });
