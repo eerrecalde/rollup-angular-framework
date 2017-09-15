@@ -13,6 +13,9 @@ const babelConfig = {
       },
       'loose': true
     }]
+  ],
+  "plugins": [
+    "external-helpers"
   ]
 };
 
@@ -34,7 +37,6 @@ export default [
 			commonjs(), // so Rollup can convert `ms` to an ES module
 			eslint(),
 			babel(babelrc({
-	      addExternalHelpersPlugin: false,
 	      config: babelConfig,
 	      exclude: 'node_modules/**'
 	    }))
