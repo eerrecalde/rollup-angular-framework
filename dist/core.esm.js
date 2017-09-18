@@ -156,8 +156,8 @@ const FilterIoCore = (function filterIo() {
   }
 }());
 
-function testingStuff(a) {
+function testingStuff2(a) {
   return a + 37;
 }
 
-export { testingStuff, FilterIoCore };
+export { testingStuff2, FilterIoCore };

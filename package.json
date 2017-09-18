@@ -38,9 +38,7 @@
     "dist"
   ],
   "jest": {
-    "roots": [
-      "lib"
-    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(filterIo.core.spec))\\.jsx?$",
     "setupTestFrameworkScriptFile": "./jest.init.js"
   }
 }
