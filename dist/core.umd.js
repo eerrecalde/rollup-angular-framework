@@ -284,12 +284,23 @@ var FilterIoCore = function filterIo() {
   };
 }();
 
+var TestingStuff = function filterIo() {
+  function test(t) {
+    var v = t || 5;
+    return v + 57;
+  }
+  return {
+    test: test
+  };
+}();
+
 function testingStuff2(a) {
   return a + 37;
 }
 
 exports.testingStuff2 = testingStuff2;
 exports.FilterIoCore = FilterIoCore;
+exports.TestingStuff = TestingStuff;
 
 Object.defineProperty(exports, '__esModule', { value: true });
 

@@ -160,9 +160,20 @@ const FilterIoCore = (function filterIo() {
   }
 }());
 
+const TestingStuff = (function filterIo() {
+  function test(t) {
+    const v = t || 5;
+    return v + 57;
+  }
+  return {
+    test,
+  }
+}());
+
 function testingStuff2(a) {
   return a + 37;
 }
 
 exports.testingStuff2 = testingStuff2;
 exports.FilterIoCore = FilterIoCore;
+exports.TestingStuff = TestingStuff;
