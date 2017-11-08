@@ -1,13 +1,11 @@
 {
-  "name": "rollup-angular-framework",
+  "name": "ctp-ecom-library",
   "version": "1.0.0",
-  "main": "dist/angular.fwk.cjs.js",
-  "module": "dist/angular.fwk.esm.js",
-  "browser": "dist/angular.fwk.umd.js",
+  "main": "dist/ctp-ecom.cjs.js",
+  "module": "dist/ctp-ecom.esm.js",
+  "browser": "dist/ctp-ecom.umd.js",
   "dependencies": {},
   "devDependencies": {
-    "angular": "^1.4.10",
-    "angular-mocks": "^1.4.10",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.0",
     "babel-plugin-external-helpers": "^6.22.0",
@@ -31,6 +29,7 @@
     "build": "rimraf dist && rollup -c rollup.config.js",
     "dev": "rollup -c -w",
     "test": "jest",
+    "test-watch": "jest --watchAll",
     "lint": "eslint ./lib --quiet",
     "prebuild": "npm run lint -- --quiet && npm run test"
   },
@@ -38,7 +37,8 @@
     "dist"
   ],
   "jest": {
-    "testRegex": "(/__tests__/.*|(\\.|/)(filterIo.core.spec))\\.jsx?$",
+    "testRegex": "(/__tests__/.*|(\\.|/)(spec))\\.jsx?$",
+    "verbose": true,
     "setupTestFrameworkScriptFile": "./jest.init.js"
   }
 }

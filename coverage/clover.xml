@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1510064964198" clover="3.2.0">
+  <project timestamp="1510064964198" name="All files">
+    <metrics statements="55" coveredstatements="49" conditionals="42" coveredconditionals="35" methods="11" coveredmethods="10" elements="108" coveredelements="94" complexity="0" loc="55" ncloc="55" packages="3" files="4" classes="4">
+      <package name="ctp-ecom-tsgctp">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="jest.init.js" path="/Users/emilianoerrecalde/Documents/emi/ctp-ecom-tsgctp/jest.init.js">
+          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        </file>
+      </package>
+      <package name="ctp-ecom-tsgctp.lib.directive.data">
+        <metrics statements="21" coveredstatements="20" conditionals="20" coveredconditionals="18" methods="5" coveredmethods="5"/>
+        <file name="filterIo.core.js" path="/Users/emilianoerrecalde/Documents/emi/ctp-ecom-tsgctp/lib/directive.data/filterIo.core.js">
+          <metrics statements="20" coveredstatements="19" conditionals="20" coveredconditionals="18" methods="5" coveredmethods="5"/>
+          <line num="11" count="2" type="cond" truecount="3" falsecount="1"/>
+          <line num="13" count="2" type="stmt"/>
+          <line num="14" count="8" type="stmt"/>
+          <line num="16" count="8" type="stmt"/>
+          <line num="18" count="132" type="stmt"/>
+          <line num="19" count="132" type="stmt"/>
+          <line num="20" count="132" type="stmt"/>
+          <line num="22" count="132" type="stmt"/>
+          <line num="23" count="396" type="cond" truecount="2" falsecount="0"/>
+          <line num="25" count="396" type="cond" truecount="4" falsecount="0"/>
+          <line num="28" count="44" type="stmt"/>
+          <line num="31" count="396" type="cond" truecount="3" falsecount="1"/>
+          <line num="32" count="0" type="stmt"/>
+          <line num="35" count="396" type="cond" truecount="4" falsecount="0"/>
+          <line num="36" count="17" type="stmt"/>
+          <line num="40" count="396" type="stmt"/>
+          <line num="43" count="132" type="cond" truecount="2" falsecount="0"/>
+          <line num="44" count="1" type="stmt"/>
+          <line num="49" count="132" type="stmt"/>
+          <line num="54" count="1" type="stmt"/>
+        </file>
+        <file name="mock.js" path="/Users/emilianoerrecalde/Documents/emi/ctp-ecom-tsgctp/lib/directive.data/mock.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="2" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="ctp-ecom-tsgctp.lib.utils">
+        <metrics statements="34" coveredstatements="29" conditionals="22" coveredconditionals="17" methods="6" coveredmethods="5"/>
+        <file name="utils.js" path="/Users/emilianoerrecalde/Documents/emi/ctp-ecom-tsgctp/lib/utils/utils.js">
+          <metrics statements="34" coveredstatements="29" conditionals="22" coveredconditionals="17" methods="6" coveredmethods="5"/>
+          <line num="11" count="90" type="stmt"/>
+          <line num="12" count="90" type="stmt"/>
+          <line num="13" count="90" type="stmt"/>
+          <line num="14" count="90" type="stmt"/>
+          <line num="15" count="92" type="stmt"/>
+          <line num="16" count="92" type="cond" truecount="2" falsecount="0"/>
+          <line num="17" count="91" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="22" count="89" type="stmt"/>
+          <line num="36" count="317" type="cond" truecount="1" falsecount="1"/>
+          <line num="48" count="704" type="cond" truecount="1" falsecount="1"/>
+          <line num="49" count="0" type="stmt"/>
+          <line num="52" count="704" type="cond" truecount="1" falsecount="1"/>
+          <line num="54" count="704" type="cond" truecount="2" falsecount="0"/>
+          <line num="57" count="0" type="stmt"/>
+          <line num="69" count="352" type="stmt"/>
+          <line num="70" count="352" type="stmt"/>
+          <line num="71" count="352" type="stmt"/>
+          <line num="74" count="352" type="cond" truecount="1" falsecount="1"/>
+          <line num="75" count="352" type="stmt"/>
+          <line num="78" count="352" type="stmt"/>
+          <line num="79" count="352" type="stmt"/>
+          <line num="82" count="352" type="stmt"/>
+          <line num="83" count="352" type="stmt"/>
+          <line num="85" count="352" type="cond" truecount="2" falsecount="0"/>
+          <line num="86" count="18" type="stmt"/>
+          <line num="89" count="334" type="cond" truecount="2" falsecount="0"/>
+          <line num="90" count="17" type="stmt"/>
+          <line num="91" count="17" type="stmt"/>
+          <line num="94" count="317" type="cond" truecount="5" falsecount="1"/>
+          <line num="95" count="0" type="stmt"/>
+          <line num="97" count="0" type="stmt"/>
+          <line num="101" count="352" type="stmt"/>
+          <line num="105" count="0" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

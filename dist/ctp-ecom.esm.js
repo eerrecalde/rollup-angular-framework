@@ -7,7 +7,7 @@
  */
 
 /* eslint-disable */
-export function getObjectValueFromString(o, s) {
+function getObjectValueFromString(o, s) {
   s = s.replace(/\[(\w+)\]/g, '.$1'); // convert indexes to properties
   s = s.replace(/^\./, ''); // strip a leading dot
   const a = s.split('.');
@@ -32,8 +32,18 @@ export function getObjectValueFromString(o, s) {
  * @param  {boolean} isPartial Filters partially when true, or exact otherwise
  * @return {boolean}           Returns true if the element is found in the array
  */
-export function isInArray(el, flt, isPartial) {
+function isInArray(el, flt, isPartial) {
   return isPartial ? el.indexOf(flt) > -1 : el === flt;
+}
+
+function getObjectFromArray(arr) {
+  const obj = {};
+
+  arr.forEach((el) => {
+    obj[el.type] = el;
+  });
+
+  return obj;
 }
 
 
@@ -44,7 +54,7 @@ export function isInArray(el, flt, isPartial) {
  * @param  {any} value to process
  * @return {type} processed value
  */
-export function getLowerCaseOrNumber (el) {
+function getLowerCaseOrNumber (el) {
   if(typeof el === 'number') {
     return parseFloat(el);
   }
@@ -65,7 +75,7 @@ export function getLowerCaseOrNumber (el) {
  * @param  {boolean} isPartial  If true, the match rule will be equal|contained in. If false, it'll be equal.
  * @return {boolean}            Returns boolean for element found condition
  */
-export function atLeastOneMatch(fltrs, element, isPartial) {
+function atLeastOneMatch(fltrs, element, isPartial) {
   let counter = 0;
   let filters = fltrs;
   let el = element;
@@ -101,6 +111,73 @@ export function atLeastOneMatch(fltrs, element, isPartial) {
   return !!counter;
 }
 
-export function testStuff() {
-  console.log('testStuff')
+function testStuff() {
+  console.log('testStuff');
 }
+
+
+var Utils = Object.freeze({
+	getObjectValueFromString: getObjectValueFromString,
+	isInArray: isInArray,
+	getObjectFromArray: getObjectFromArray,
+	getLowerCaseOrNumber: getLowerCaseOrNumber,
+	atLeastOneMatch: atLeastOneMatch,
+	testStuff: testStuff
+});
+
+/**
+ * var getFiltredCollection - Filters given array against given filters.
+ *
+ * @param  {array} items   Array to loop through
+ * @param  {array} filters Filters to be used to remove or not elements from the resulting array
+ * @return {array}         Final filtred array
+ */
+function getFiltredCollection (items, filters, isPartial) {
+  if (!filters || !filters.length) {return items;}
+
+  return items.filter((j) => {
+    let ioObjectMatchingCounter = 0;
+
+    return j.data.io.filter((item) => {
+
+      filters.forEach((filterUnit) => {
+        let filtersMatchingCounter = 0;
+        const filterKeys = Object.keys(filterUnit);
+
+        filterKeys.forEach((key) => {
+          let propInItem = item[key] || undefined;
+
+          if(!item[key] && getObjectValueFromString(item, key) !== undefined) {
+            // console.log('Utils item', item);
+            // console.log('Utils key', key);
+            propInItem = getObjectValueFromString(item, key);
+          }
+
+          if(key === 'undefined' || filterUnit[key] === 'undefined') {
+            return;
+          }
+
+          if(propInItem && atLeastOneMatch(filterUnit[key], propInItem, isPartial)) {
+            filtersMatchingCounter += 1;
+          }
+
+          // eslint-disable-next-line
+          return;
+        });
+
+        if(filtersMatchingCounter === filterKeys.length) {
+          ioObjectMatchingCounter += 1;
+        }
+
+      });
+
+      return ioObjectMatchingCounter === filters.length;
+    }).length > 0;
+  });
+}
+
+const FilterIoCore$1 = {
+  getFiltredCollection,
+};
+
+export { FilterIoCore$1 as FilterIoCore, Utils };
