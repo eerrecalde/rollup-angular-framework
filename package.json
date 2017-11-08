@@ -1,9 +1,9 @@
 {
   "name": "ctp-ecom-library",
   "version": "1.0.0",
-  "main": "dist/ctp-ecom.cjs.js",
-  "module": "dist/ctp-ecom.esm.js",
-  "browser": "dist/ctp-ecom.umd.js",
+  "main": "lib/ctp-ecom.esm.js",
+  "module": "lib/ctp-ecom.esm.js",
+  "browser": "lib/ctp-ecom.umd.js",
   "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -26,11 +26,11 @@
     "rollup-plugin-node-resolve": "^3.0.0"
   },
   "scripts": {
-    "build": "rimraf dist && rollup -c rollup.config.js",
+    "build": "rimraf lib && rollup -c rollup.config.js",
     "dev": "rollup -c -w",
     "test": "jest",
     "test-watch": "jest --watchAll",
-    "lint": "eslint ./lib --quiet",
+    "lint": "eslint ./src --quiet",
     "prebuild": "npm run lint -- --quiet && npm run test"
   },
   "files": [
