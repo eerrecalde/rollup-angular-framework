@@ -40,7 +40,7 @@ export default [
   {
     input: 'src/index.js',
     name: pkg.namejs,
-    external: ['angular', 'debug'],
+    external: ['angular'],
     globals: {
       angular: 'angular',
     },
@@ -56,7 +56,7 @@ export default [
   {
     input: 'src/index.js',
     name: pkg.namejs,
-    external: ['angular', 'debug'],
+    external: ['angular'],
     globals: {
       angular: 'angular',
     },
