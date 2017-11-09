@@ -1,7 +1,7 @@
 {
   "name": "ctp-ecom-library",
   "namejs": "ctp_ecom_library",
-  "version": "1.0.0",
+  "version": "1.3",
   "main": "lib/ctp-ecom-library.esm.js",
   "module": "lib/ctp-ecom-library.esm.js",
   "browser": "lib/ctp-ecom-library.umd.min.js",
@@ -37,7 +37,7 @@
     "prebuild": "npm run lint -- --quiet && npm run test"
   },
   "files": [
-    "dist"
+    "lib"
   ],
   "jest": {
     "testRegex": "(/__tests__/.*|(\\.|/)(spec))\\.jsx?$",
