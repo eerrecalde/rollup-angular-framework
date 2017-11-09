@@ -54,12 +54,12 @@ export function getObjectFromArray(arr) {
  * @param  {any} value to process
  * @return {type} processed value
  */
-export function getLowerCaseOrNumber (el) {
-  if(typeof el === 'number') {
+export function getLowerCaseOrNumber(el) {
+  if (typeof el === 'number') {
     return parseFloat(el);
   }
 
-  if(typeof el === 'string') {
+  if (typeof el === 'string') {
     // eslint-disable-next-line
     return isNaN(el) ? el.toLowerCase() : parseFloat(el);
   }
@@ -81,7 +81,7 @@ export function atLeastOneMatch(fltrs, element, isPartial) {
   let el = element;
 
   // Unify filters. Make it an array if it isn't yet
-  if(!Array.isArray(fltrs)) {
+  if (!Array.isArray(fltrs)) {
     filters = [fltrs];
   }
 
@@ -92,16 +92,16 @@ export function atLeastOneMatch(fltrs, element, isPartial) {
     flt = getLowerCaseOrNumber(flt);
     el = getLowerCaseOrNumber(el);
 
-    if(typeof el !== typeof flt) {
+    if (typeof el !== typeof flt) {
       return;
     }
 
-    if(el === flt) {
+    if (el === flt) {
       counter += 1;
       return;
     }
 
-    if(!filters.length || (el && el.length && isInArray(el, flt, isPartial))) {
+    if (!filters.length || (el && el.length && isInArray(el, flt, isPartial))) {
       counter += 1;
       // eslint-disable-next-line
       return;

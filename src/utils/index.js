@@ -1,4 +1,3 @@
-import * as Utils from "./utils";
+import * as Utils from './utils';
 
-// These will be available as separated modules.
-export default Utils;
+export { Utils }; // eslint-disable-line

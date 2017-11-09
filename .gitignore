@@ -2,5 +2,6 @@
 .tmp
 .git
 node_modules
+public/
 .settings
 *.log

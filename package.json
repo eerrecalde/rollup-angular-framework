@@ -1,9 +1,11 @@
 {
   "name": "ctp-ecom-library",
+  "namejs": "ctp_ecom_library",
   "version": "1.0.0",
-  "main": "lib/ctp-ecom.esm.js",
-  "module": "lib/ctp-ecom.esm.js",
-  "browser": "lib/ctp-ecom.umd.js",
+  "main": "lib/ctp-ecom-library.esm.js",
+  "module": "lib/ctp-ecom-library.esm.js",
+  "browser": "lib/ctp-ecom-library.umd.min.js",
+  "browser_unminified": "lib/ctp-ecom-library.umd.js",
   "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -11,10 +13,9 @@
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.6.0",
     "babelrc-rollup": "^3.0.0",
+    "eslint": "^4.10.0",
     "eslint-config-airbnb-base": "^12.0.0",
-    "eslint-config-prettier": "^2.4.0",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-prettier": "^2.2.0",
     "install": "^0.10.1",
     "jest": "^21.1.0",
     "npm": "^5.4.1",
@@ -23,10 +24,12 @@
     "rollup-plugin-babel": "^3.0.2",
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-eslint": "^4.0.0",
-    "rollup-plugin-node-resolve": "^3.0.0"
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-uglify": "^2.0.1"
   },
   "scripts": {
-    "build": "rimraf lib && rollup -c rollup.config.js",
+    "build": "rimraf lib && NODE_ENV=production ./node_modules/.bin/rollup -c",
     "dev": "rollup -c -w",
     "test": "jest",
     "test-watch": "jest --watchAll",
