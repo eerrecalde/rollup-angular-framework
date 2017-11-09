@@ -1,7 +1,7 @@
 {
   "name": "ctp-ecom-library",
   "namejs": "ctp_ecom_library",
-  "version": "1.4",
+  "version": "1.0.0",
   "main": "lib/ctp-ecom-library.esm.js",
   "module": "lib/ctp-ecom-library.esm.js",
   "browser": "lib/ctp-ecom-library.umd.min.js",
