@@ -7,7 +7,7 @@ import * as Utils from '../utils/utils';
  * @param  {array} filters Filters to be used to remove or not elements from the resulting array
  * @return {array}         Final filtred array
  */
-export default function getFiltredCollection(items, filters, isPartial) {
+function getFiltredCollection(items, filters, isPartial) {
   if (!filters || !filters.length) { return items; }
 
   return items.filter((j) => {
@@ -22,8 +22,6 @@ export default function getFiltredCollection(items, filters, isPartial) {
           let propInItem = item[key] || undefined;
 
           if (!item[key] && Utils.getObjectValueFromString(item, key) !== undefined) {
-            // console.log('Utils item', item);
-            // console.log('Utils key', key);
             propInItem = Utils.getObjectValueFromString(item, key);
           }
 
@@ -49,4 +47,8 @@ export default function getFiltredCollection(items, filters, isPartial) {
   });
 }
 
-// export default { FilterIoCore: getFiltredCollection };
+const FilterIoCore = {
+  getFiltredCollection,
+};
+
+export default FilterIoCore;

@@ -27,7 +27,8 @@ export function getObjectValueFromString(o, s) {
 /**
  * isInArray - Returns true if the element is found in the array.
  *
- * @param  {string}  el        Item property string retrieved from the list of properties from each item
+ * @param  {string}  el        Item property string retrieved from the list of properties from
+ * each item
  * @param  {string}  flt       Filter string retrieved from the list of filters
  * @param  {boolean} isPartial Filters partially when true, or exact otherwise
  * @return {boolean}           Returns true if the element is found in the array
@@ -48,7 +49,8 @@ export function getObjectFromArray(arr) {
 
 
 /**
- * getLowrCaseOrNumber - Returns the same value, but converted into float if number, or lowercase if string
+ * getLowrCaseOrNumber - Returns the same value, but converted into float if number, or lowercase
+ * if string
  * This is to facilitate the comparission
  *
  * @param  {any} value to process
@@ -72,7 +74,8 @@ export function getLowerCaseOrNumber(el) {
  *
  * @param  {array}   filters    List of filters match against
  * @param  {string}  el         Element to look for in the filters array
- * @param  {boolean} isPartial  If true, the match rule will be equal|contained in. If false, it'll be equal.
+ * @param  {boolean} isPartial  If true, the match rule will be equal|contained in. If false,
+ * it'll be equal.
  * @return {boolean}            Returns boolean for element found condition
  */
 export function atLeastOneMatch(fltrs, element, isPartial) {
@@ -109,8 +112,4 @@ export function atLeastOneMatch(fltrs, element, isPartial) {
   });
 
   return !!counter;
-}
-
-export function testStuff() {
-  console.log('testStuff');
 }

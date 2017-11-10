@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "main": "lib/ctp-ecom-library.esm.js",
   "module": "lib/ctp-ecom-library.esm.js",
-  "browser": "lib/ctp-ecom-library.umd.min.js",
-  "browser_unminified": "lib/ctp-ecom-library.umd.js",
+  "browser": "lib/ctp-ecom-library.min.js",
+  "browser_unminified": "lib/ctp-ecom-library.js",
   "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.0",
