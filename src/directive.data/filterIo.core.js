@@ -7,7 +7,7 @@ import * as Utils from '../utils/utils';
  * @param  {array} filters Filters to be used to remove or not elements from the resulting array
  * @return {array}         Final filtred array
  */
-function getFiltredCollection(items, filters, isPartial) {
+export default function getFiltredCollection(items, filters, isPartial) {
   if (!filters || !filters.length) { return items; }
 
   return items.filter((j) => {
@@ -49,8 +49,4 @@ function getFiltredCollection(items, filters, isPartial) {
   });
 }
 
-const FilterIoCore = {
-  getFiltredCollection,
-};
-
-export default FilterIoCore;
+// export default { FilterIoCore: getFiltredCollection };

@@ -1,2 +1,4 @@
-export { FilterIoCore } from './directive.data/index';
-export { Utils } from './utils/index';
+import FilterIo from './directive.data/index';
+
+export { FilterIo };
+export * from './utils/index';
