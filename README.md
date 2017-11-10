@@ -2,23 +2,19 @@
 
 #### Tools/Libs used
 
-##### Rollup
+#### [Rollup](https://rollupjs.org/)
 To generate final bundle
-[Rollup](https://rollupjs.org/)
 
-##### Babel
+#### [Babel](https://babeljs.io/)
 To support es6 in the src files and tests
-[Babel](https://babeljs.io/)
 
-##### Eslint
+#### [Eslint](https://eslint.org/)
 To lint code before bundling
-[Eslint](https://eslint.org/)
 
-##### Jest
+#### [Jest](https://facebook.github.io/jest/)
 To unit test code before bundling
-[Jest](https://facebook.github.io/jest/)
 
-####### Why jest?
+##### Why jest?
 Because it provides super fast unit and integration test toolset with no configuration needed, all included (coverage, watcher, and snapshots, between others)
 
 #### Development notes and concepts
